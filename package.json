@@ -24,7 +24,8 @@
   "homepage": "https://github.com/romanwoessner/rpi_node_wordclock",
   "dependencies": {
     "lodash": "^3.10.0",
-    "rpi-ws281x-native": "^0.4.0"
+    "rpi-ws281x-native": "^0.4.0",
+    "tinycolor2": "^1.1.2"
   },
   "devDependencies": {
     "jasmine-core": "^2.3.4",

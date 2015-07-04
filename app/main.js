@@ -1,8 +1,9 @@
-var util = require('util');
+var config = require('config');
+var util = require('pixeldata');
 var ws281x = require('rpi-ws281x-native');
 
-var NUM_LEDS = 20;
-pixelData = new Uint32Array(NUM_LEDS);
+var NUM_LEDS = config.NUM_LEDS;
+pixelData = new PixelData(NUM_LEDS);
 
 process.on('SIGINT', function() {
   ws281x.reset();
