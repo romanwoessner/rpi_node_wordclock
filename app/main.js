@@ -16,7 +16,7 @@ ws281x.init(NUM_LEDS);
 
 setInterval(function function_name(argument) {
   for (var i = 0; i < NUM_LEDS; i++) {
-    pixelData[i] = 0x00ff00;
+    pixelData.setOverallHexColor('#00ff00');
   }
   ws281x.render(pixelData);
 }, 1000);
