@@ -43,7 +43,7 @@ function PixelData(size) {
 
   this.setColors = function (positions, colors) {
     if (positions.length != colors.length) {
-      console.log("Invalid parameters for setColors()");
+      // console.log("Invalid parameters for setColors()");
       return;
     }
     for (var i = 0; i < positions.length; i++) {
