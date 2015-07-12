@@ -10,7 +10,7 @@ module.exports = {
       display.show();
       setTimeout(function() {
         display.setOverallColor('#00ff00');
-        disyplay.show();
+        display.show();
       }, 100)
     }, 100)
   }

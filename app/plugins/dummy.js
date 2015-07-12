@@ -17,7 +17,7 @@ module.exports = {
       }, 1000);
       setTimeout(function() {
         display.setOverallColor('#31a354')
-        disyplay.show();
+        display.show();
       }, 1000);
       setTimeout(function() {
         display.setOverallColor('#006d2c')

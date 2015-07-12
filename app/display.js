@@ -1,31 +1,32 @@
 var ws281x = require('rpi-ws281x-native');
-var PixelData = require('pixeldata.js');
+var PixelData = require('./pixeldata');
 
 function Display() {
-  var pixeldata = new PixelData();
+  this.pixeldata = new PixelData();
+  ws281x.init();
 
-  this.reset() {
+  this.reset = function() {
     pixeldata.wipe();
     ws281x.reset();
   }
 
-  this.show() {
-    ws281x.render(pixeldata);
+  this.show = function() {
+    ws281x.render(this.pixeldata);
   }
 
-  this.setOverallColor(color) {
+  this.setOverallColor = function(color) {
     this.pixeldata.setOverallHexColor(color);
   }
 
-  this.setColorAt1DCoordinate(position, color) {
+  this.setColorAt1DCoordinate = function(position, color) {
     this.pixeldata.setHexColorAtPosition(position.color);
   }
 
-  this.setColorsAt1DCoordinates(positions, colors) {
+  this.setColorsAt1DCoordinates = function(positions, colors) {
     this.pixeldata.setHexColors(positions, colors);
   }
 
-  this.setSingleColorAt1DCoordinates (positions, color) {
+  this.setSingleColorAt1DCoordinates = function(positions, color) {
     var colors = new Array();
     for (var i = 0; i < positions.length; i++) {
       colors[i] = color;
