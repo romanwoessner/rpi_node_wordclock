@@ -2,6 +2,8 @@ var PixelData = require('../pixeldata.js');
 
 module.exports = {
   id: "time_default",
-  name: "Default Time Plugin"
+  name: "Default Time Plugin",
+  run: function(display) {
 
+  }
 }

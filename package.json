@@ -4,7 +4,7 @@
   "description": "NodeJS Wordclock application for Raspberry Pi and WS281x LED stripes",
   "main": "app/main.js",
   "scripts": {
-    "start": "node app/main.js",
+    "start": "node app/wordclock.js",
     "test": "./node_modules/.bin/jasmine-node spec"
   },
   "repository": {

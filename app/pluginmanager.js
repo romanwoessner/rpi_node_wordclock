@@ -1,7 +1,9 @@
 var _ = require('lodash');
 var fs = require('fs');
 
-function PluginManager() {
+function PluginManager(display) {
+
+  this.display = display
 
   this.PLUGIN_PATH = './app/plugins';
   this.initialized = false;
@@ -37,6 +39,7 @@ function PluginManager() {
 
   this.activate = function(id) {
     this.activePlugin = _.get(this.plugins, id);
+    this.activePlugin.run(this.display);
   }
 
 }

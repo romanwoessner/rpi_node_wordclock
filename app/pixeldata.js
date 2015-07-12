@@ -50,6 +50,15 @@ function PixelData(size) {
       this.data[positions[i]] = colors[i];
     }
   }
+  this.setHexColors = function (positions, colors) {
+    if (positions.length != colors.length) {
+      // console.log("Invalid parameters for setColors()");
+      return;
+    }
+    for (var i = 0; i < positions.length; i++) {
+      this.data[positions[i]] = colors[colorutil.hex2Int(i)];
+    }
+  }
 
 
 }
