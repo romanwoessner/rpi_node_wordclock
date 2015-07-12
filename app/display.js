@@ -11,7 +11,7 @@ function Display() {
   }
 
   this.show = function() {
-    ws281x.render(this.pixeldata);
+    ws281x.render(this.pixeldata.data);
   }
 
   this.setOverallColor = function(color) {
