@@ -2,7 +2,7 @@ var ws281x = require('rpi-ws281x-native');
 var PixelData = require('./pixeldata');
 
 function Display() {
-  this.pixeldata = new PixelData();
+  this.pixeldata = new PixelData(240);
   ws281x.init(240);
 
   this.reset = function() {
