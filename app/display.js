@@ -3,7 +3,7 @@ var PixelData = require('./pixeldata');
 
 function Display() {
   this.pixeldata = new PixelData();
-  ws281x.init();
+  ws281x.init(240);
 
   this.reset = function() {
     pixeldata.wipe();
